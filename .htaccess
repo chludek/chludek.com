@@ -71,15 +71,6 @@ ErrorDocument 404 /404.html
 
 
 # ----------------------------------------------------------------------
-# Gzip compression
-# ----------------------------------------------------------------------
-
-<ifmodule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
-</ifmodule>
-
-
-# ----------------------------------------------------------------------
 # keep-alive
 # ----------------------------------------------------------------------
 <ifModule mod_headers.c>
