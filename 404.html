@@ -48,7 +48,7 @@
 			text-shadow: none;
 		}
 
-		#main {
+		main {
 			margin: 1vmin;
 			text-align: center;
 		}
@@ -83,7 +83,11 @@
 			box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
 		}
 		.small { font-size: 2vmin; }
-		svg { float: right; }
+		svg {
+            float: right;
+            width: 3vmin;
+            height: 3vmin;
+        }
 
 		/* based on https://elrumordelaluz.github.io/csshake/ ;D */
 		@keyframes shake-your-rump {
@@ -144,7 +148,7 @@
 
 <body>
 
-<div id="main">
+<main>
 
 	<section id="hello">
 		<span class="column1">OMFG, dude, it's a</span><br/>
@@ -153,13 +157,13 @@
 
 	<a href="http://chludek.com">
         TO THE HOMEPAGE<span class="small">, and beyond</span>
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="3vmin" height="3vmin" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
             <g><polygon fill="#DFDFDF" points="-0.083,20 7.383,12 -0.083,4 4.388,4 11.834,12 4.388,20"/></g>
         </svg>
     </a>
 
-</div>
+</main>
 
 </body>
 </html>
