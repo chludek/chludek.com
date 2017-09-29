@@ -37,24 +37,24 @@
         }
 
         html, body {
-            background-color: #242424;
-            font-size: 16px;
-            height: 100%;
-            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #242424;
+            height: 100%;
+            width: 100%;
             padding: 0;
             margin: 0;
             font-family: 'BebasNeueRegular', Arial, sans-serif;
+            font-size: 16px;
             letter-spacing: 0;
             color: #dfdfdf;
         }
 
         ::selection {
             background: #00d8ff;
-            color: #fff;
             text-shadow: none;
+            color: #ffffff;
         }
 
         main {
@@ -82,43 +82,42 @@
             line-height: 11.3vmin;
         }
 
-        .name { color: #FFF; }
+        .name { color: #ffffff; }
 
         #love {
             font-family: 'MunroRegular', Arial, sans-serif;
             font-size: 12vmin;
             color: #cf3a3a;
             position: relative;
-            bottom: 0.9vmin;
             right: 0.4vmin;
+            bottom: 0.9vmin;
         }
 
         #love .rotate {
-            transform: rotate(90deg);
             display: inline-block;
+            transform: rotate(90deg);
             font-size: 11vmin;
         }
 
         .overlay {
-            position: relative;
             display: inline-block;
+            position: relative;
         }
 
         .overlay:after {
+            background-color: rgba(32, 32, 32, 0);
             display: block;
+            width: 100%;
             position: absolute;
             top: 0;
-            width: 100%;
-            background-color: #FF0000;
             font-size: 6vmin;
             color: rgba(255, 255, 255, 0);
-            background-color: rgba(32, 32, 32, 0);
             transition: 0.3s ease-in;
         }
 
             .overlay:hover:after {
-                color: rgba(255, 255, 255, 0.95);
                 background-color: rgba(32, 32, 32, 0.95);
+                color: rgba(255, 255, 255, 0.95);
             }
 
         #hey:after { content: "Hey"; }
@@ -128,14 +127,12 @@
             top: -0.5vmin;
         }
 
-
         #color_bar {
             width: 100%;
             height: 1.5vmax;
             position: relative;
             top: 1.8vmin;
-
-            background:#66e8ff;
+            background: #66e8ff;
             background: linear-gradient(to right,
                         #00d8ff 0%,#00d8ff 20%,
                         #33e0ff 20%,#33e0ff 40%,
