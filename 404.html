@@ -3,146 +3,155 @@
 <html class="no-js" lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>404 on CHLUDEK.COM</title>
-	<meta name="description" content="Alexander Chludek loves pixel, design and the internet" />
-	<meta name="author" content="Alexander Chludek" />
-	<meta name="keyword" content="Chludek, Alex, Alexander, pixel, design, webdesign, bonn, köln, rheinwerk" />
+    <title>404 on CHLUDEK.COM</title>
+    <meta name="description" content="Alexander Chludek loves pixel, design and the internet" />
+    <meta name="author" content="Alexander Chludek" />
+    <meta name="keyword" content="Chludek, Alex, Alexander, pixel, design, webdesign, bonn, köln, rheinwerk" />
 
-	<meta name="viewport" content="width=device-width" />
-	<meta name="theme-color" content="#cf3a3a" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#cf3a3a" />
 
-	<link rel="icon" type="image/png" href="favicon.png" />
-	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-	<style>
-		div, section, a { box-sizing: border-box; }
+    <style>
+        :root {
+            --error: #cf3a3a;
+            --font: #dfdfdf;
+        }
 
-		@font-face {
-			font-family: 'BebasNeueRegular';
-			src: url('/fonts/BebasNeue-webfont.woff') format('woff');
-			font-weight: normal;
-			font-style: normal;
-		}
+        div, section, a { box-sizing: border-box; }
 
-		html, body {
-			background-color:#242424;
-			font-size: 16px;
-			height: 100%;
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 0;
-			margin: 0;
-			font-family: 'BebasNeueRegular', Arial, sans-serif;
-			letter-spacing: 0;
-			color:#dfdfdf;
-		}
+        @font-face {
+            font-family: 'BebasNeueRegular';
+            src: url('/fonts/BebasNeue-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
 
-		::selection {
-			background: #00d8ff;
-			color: #fff;
-			text-shadow: none;
-		}
+        html, body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #242424;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: 'BebasNeueRegular', Arial, sans-serif;
+            font-size: 16px;
+            letter-spacing: 0;
+            color: var(--font);
+        }
 
-		main {
-			margin: 1vmin;
-			text-align: center;
-		}
+        ::selection {
+            background: #00d8ff;
+            text-shadow: none;
+            color: #ffffff;
+        }
 
-		.column1 {
-			font-size: 11.2vmin;
-			line-height: 12vmin;
-		}
+        main {
+            margin: 1vmin;
+            text-align: center;
+        }
 
-		.column2 {
-			font-size: 20.2vmin;
-			line-height: 17vmin;
-		}
+        .column1 {
+            font-size: 11.2vmin;
+            line-height: 12vmin;
+        }
 
-		.name { color:#FFF; }
-		.error { color:#cf3a3a; }
+        .column2 {
+            font-size: 20.2vmin;
+            line-height: 17vmin;
+        }
 
-		a {
-			display: block;
-			background:#cf3a3a;
-			width:100%;
-			position: relative;
-			top: 1.8vmin;
-			font-size: 3.2vmin;
-			color:#dfdfdf;
-			text-decoration: none;
-			text-align: left;
-			padding: 0.5vmin 0vmin 0.5vmin 1.2vmin;
-		}
-		a:hover {
-			animation: shake-your-rump 1s ease-in-out infinite;
-			box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
-		}
-		.small { font-size: 2vmin; }
-		svg {
+        .name { color: #ffffff; }
+        .error { color: var(--error); }
+
+        a {
+            display: block;
+            background: var(--error);
+            width: 100%;
+            position: relative;
+            top: 1.8vmin;
+            font-size: 3.2vmin;
+            color: var(--font);
+            text-decoration: none;
+            text-align: left;
+            padding: 0.5vmin 0vmin 0.5vmin 1.2vmin;
+        }
+
+            a:hover {
+                animation: shake-your-rump 1s ease-in-out infinite;
+                box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
+            }
+
+        .small { font-size: 2vmin; }
+
+        svg {
             float: right;
             width: 3vmin;
             height: 3vmin;
         }
 
-		/* based on https://elrumordelaluz.github.io/csshake/ ;D */
-		@keyframes shake-your-rump {
-			2% { transform: translate(-1px, -5px) rotate(-2.5deg); }
-			4% { transform: translate(-5px, -8px) rotate(2.5deg); }
-			6% { transform: translate(4px, 2px) rotate(-0.5deg); }
-			8% { transform: translate(1px, 6px) rotate(-1.5deg); }
-			10% { transform: translate(-3px, -6px) rotate(3.5deg); }
-			12% { transform: translate(10px, 5px) rotate(-2.5deg); }
-			14% { transform: translate(-5px, 8px) rotate(-0.5deg); }
-			16% { transform: translate(7px, 6px) rotate(-2.5deg) scale(1.2, 1.5); }
-			18% { transform: translate(4px, -7px) rotate(1.5deg); }
-			20% { transform: translate(-2px, 2px) rotate(0.5deg); }
-			22% { transform: translate(-1px, 9px) rotate(-0.5deg); }
-			24% { transform: translate(1px, -2px) rotate(0.5deg); }
-			26% { transform: translate(-7px, -9px) rotate(1.5deg); }
-			28% { transform: translate(-5px, -2px) rotate(-2.5deg); }
-			30% { transform: translate(-4px, 7px) rotate(3.5deg); }
-			32% { transform: translate(8px, 2px) rotate(2.5deg); }
-			34% { transform: translate(5px, -5px) rotate(0.5deg); }
-			36% { transform: translate(-8px, -8px) rotate(2.5deg); }
-			38% { transform: translate(-7px, -2px) rotate(2.5deg) scale(1.3, 0.8); }
-			40% { transform: translate(8px, 0px) rotate(-1.5deg ); }
-			42% { transform: translate(0px, -2px) rotate(2.5deg); }
-			44% { transform: translate(-1px, 1px) rotate(3.5deg); }
-			46% { transform: translate(10px, -5px) rotate(2.5deg); }
-			48% { transform: translate(-1px, 7px) rotate(0.5deg); }
-			50% { transform: translate(-8px, -2px) rotate(1.5deg); }
-			52% { transform: translate(-9px, 8px) rotate(2.5deg); }
-			54% { transform: translate(2px, 9px) rotate(-2.5deg); }
-			56% { transform: translate(-2px, 0px) rotate(2.5deg) scale(0.7, 1.4); }
-			58% { transform: translate(1px, 1px) rotate(-2.5deg); }
-			60% { transform: translate(10px, -9px) rotate(-0.5deg); }
-			62% { transform: translate(5px, 4px) rotate(0.5deg); }
-			64% { transform: translate(2px, -4px) rotate(0.5deg); }
-			66% { transform: translate(-9px, -7px) rotate(2.5deg); }
-			68% { transform: translate(-5px, -1px) rotate(0.5deg); }
-			70% { transform: translate(9px, -1px) rotate(2.5deg); }
-			72% { transform: translate(8px, 8px) rotate(-1.5deg scale(1.3, 1.4)); }
-			74% { transform: translate(-1px, 4px) rotate(2.5deg); }
-			76% { transform: translate(3px, -7px) rotate(1.5deg); }
-			78% { transform: translate(-7px, 0px) rotate(-2.5deg); }
-			80% { transform: translate(-5px, 5px) rotate(2.5deg); }
-			82% { transform: translate(6px, 6px) rotate(-0.5deg); }
-			84% { transform: translate(10px, 8px) rotate(-0.5deg); }
-			86% { transform: translate(4px, 10px) rotate(-0.5deg); }
-			88% { transform: translate(-5px, -9px) rotate(-1.5deg); }
-			90% { transform: translate(-8px, 9px) rotate(1.5deg) scale(0.6, 1.45); }
-			92% { transform: translate(6px, 6px) rotate(-1.5deg); }
-			94% { transform: translate(-3px, -4px) rotate(-1.5deg); }
-			96% { transform: translate(6px, -5px) rotate(0.5deg); }
-			98% { transform: translate(10px, 4px) rotate(-0.5deg); }
-			0%, 100% { transform: translate(0, 0) rotate(0); }
-		}
-	</style>
+        /* based on https://elrumordelaluz.github.io/csshake/ ;D */
+        @keyframes shake-your-rump {
+            2% { transform: translate(-1px, -5px) rotate(-2.5deg); }
+            4% { transform: translate(-5px, -8px) rotate(2.5deg); }
+            6% { transform: translate(4px, 2px) rotate(-0.5deg); }
+            8% { transform: translate(1px, 6px) rotate(-1.5deg); }
+            10% { transform: translate(-3px, -6px) rotate(3.5deg); }
+            12% { transform: translate(10px, 5px) rotate(-2.5deg); }
+            14% { transform: translate(-5px, 8px) rotate(-0.5deg); }
+            16% { transform: translate(7px, 6px) rotate(-2.5deg) scale(1.2, 1.5); }
+            18% { transform: translate(4px, -7px) rotate(1.5deg); }
+            20% { transform: translate(-2px, 2px) rotate(0.5deg); }
+            22% { transform: translate(-1px, 9px) rotate(-0.5deg); }
+            24% { transform: translate(1px, -2px) rotate(0.5deg); }
+            26% { transform: translate(-7px, -9px) rotate(1.5deg); }
+            28% { transform: translate(-5px, -2px) rotate(-2.5deg); }
+            30% { transform: translate(-4px, 7px) rotate(3.5deg); }
+            32% { transform: translate(8px, 2px) rotate(2.5deg); }
+            34% { transform: translate(5px, -5px) rotate(0.5deg); }
+            36% { transform: translate(-8px, -8px) rotate(2.5deg); }
+            38% { transform: translate(-7px, -2px) rotate(2.5deg) scale(1.3, 0.8); }
+            40% { transform: translate(8px, 0px) rotate(-1.5deg ); }
+            42% { transform: translate(0px, -2px) rotate(2.5deg); }
+            44% { transform: translate(-1px, 1px) rotate(3.5deg); }
+            46% { transform: translate(10px, -5px) rotate(2.5deg); }
+            48% { transform: translate(-1px, 7px) rotate(0.5deg); }
+            50% { transform: translate(-8px, -2px) rotate(1.5deg); }
+            52% { transform: translate(-9px, 8px) rotate(2.5deg); }
+            54% { transform: translate(2px, 9px) rotate(-2.5deg); }
+            56% { transform: translate(-2px, 0px) rotate(2.5deg) scale(0.7, 1.4); }
+            58% { transform: translate(1px, 1px) rotate(-2.5deg); }
+            60% { transform: translate(10px, -9px) rotate(-0.5deg); }
+            62% { transform: translate(5px, 4px) rotate(0.5deg); }
+            64% { transform: translate(2px, -4px) rotate(0.5deg); }
+            66% { transform: translate(-9px, -7px) rotate(2.5deg); }
+            68% { transform: translate(-5px, -1px) rotate(0.5deg); }
+            70% { transform: translate(9px, -1px) rotate(2.5deg); }
+            72% { transform: translate(8px, 8px) rotate(-1.5deg scale(1.3, 1.4)); }
+            74% { transform: translate(-1px, 4px) rotate(2.5deg); }
+            76% { transform: translate(3px, -7px) rotate(1.5deg); }
+            78% { transform: translate(-7px, 0px) rotate(-2.5deg); }
+            80% { transform: translate(-5px, 5px) rotate(2.5deg); }
+            82% { transform: translate(6px, 6px) rotate(-0.5deg); }
+            84% { transform: translate(10px, 8px) rotate(-0.5deg); }
+            86% { transform: translate(4px, 10px) rotate(-0.5deg); }
+            88% { transform: translate(-5px, -9px) rotate(-1.5deg); }
+            90% { transform: translate(-8px, 9px) rotate(1.5deg) scale(0.6, 1.45); }
+            92% { transform: translate(6px, 6px) rotate(-1.5deg); }
+            94% { transform: translate(-3px, -4px) rotate(-1.5deg); }
+            96% { transform: translate(6px, -5px) rotate(0.5deg); }
+            98% { transform: translate(10px, 4px) rotate(-0.5deg); }
+            0%, 100% { transform: translate(0, 0) rotate(0); }
+        }
+    </style>
 
 </head>
 
@@ -150,16 +159,16 @@
 
 <main>
 
-	<section id="hello">
-		<span class="column1">OMFG, dude, it's a</span><br/>
-		<span class="column2"><span class="error">404</span><span class="name">error</span><br/>
-	</section>
+    <section id="hello">
+        <span class="column1">OMFG, dude, it's a</span><br/>
+        <span class="column2"><span class="error">404</span><span class="name">error</span><br/>
+    </section>
 
-	<a href="http://chludek.com">
+    <a href="http://chludek.com">
         TO THE HOMEPAGE<span class="small">, and beyond</span>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <g><polygon fill="#DFDFDF" points="-0.083,20 7.383,12 -0.083,4 4.388,4 11.834,12 4.388,20"/></g>
+            <g><polygon fill="#dfdfdf" points="-0.083,20 7.383,12 -0.083,4 4.388,4 11.834,12 4.388,20"/></g>
         </svg>
     </a>
 
