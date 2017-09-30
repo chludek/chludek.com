@@ -18,6 +18,11 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
     <style>
+        :root {
+            --error: #cf3a3a;
+            --font: #dfdfdf;
+        }
+
         div, section, a { box-sizing: border-box; }
 
         @font-face {
@@ -40,7 +45,7 @@
             font-family: 'BebasNeueRegular', Arial, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
-            color: #dfdfdf;
+            color: var(--font);
         }
 
         ::selection {
@@ -65,25 +70,28 @@
         }
 
         .name { color: #ffffff; }
-        .error { color:#cf3a3a; }
+        .error { color: var(--error); }
 
         a {
             display: block;
-            background:#cf3a3a;
-            width:100%;
+            background: var(--error);
+            width: 100%;
             position: relative;
             top: 1.8vmin;
             font-size: 3.2vmin;
-            color:#dfdfdf;
+            color: var(--font);
             text-decoration: none;
             text-align: left;
             padding: 0.5vmin 0vmin 0.5vmin 1.2vmin;
         }
-        a:hover {
-            animation: shake-your-rump 1s ease-in-out infinite;
-            box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
-        }
+
+            a:hover {
+                animation: shake-your-rump 1s ease-in-out infinite;
+                box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
+            }
+
         .small { font-size: 2vmin; }
+
         svg {
             float: right;
             width: 3vmin;
@@ -160,7 +168,7 @@
         TO THE HOMEPAGE<span class="small">, and beyond</span>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
-            <g><polygon fill="#DFDFDF" points="-0.083,20 7.383,12 -0.083,4 4.388,4 11.834,12 4.388,20"/></g>
+            <g><polygon fill="#dfdfdf" points="-0.083,20 7.383,12 -0.083,4 4.388,4 11.834,12 4.388,20"/></g>
         </svg>
     </a>
 
