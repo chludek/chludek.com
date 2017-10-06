@@ -13,7 +13,7 @@ It's all pure HTML5 and CSS3. No fancy node.js server magic, no container action
 
 ## Stuff I use
 * The awesome font is [Bebas Neue](http://dharmatype.com/post/84312257192/bebas-neue) by [Ryoichi Tsunekawa](http://dharmatype.com).
-* The font for the pixel heart is [Munro Regular](http://tenbytwenty.com/?xxxx_posts=munro) by [Ed Merritt](http://edmerritt.com).
+* The font for the pixel heart is [Munro Regular](http://tenbytwenty.com/?xxxx_posts=munro) by [Ed Merritt](http://edmerritt.com) and is modified (removed every character besides `v` and `3`).
 * The button animation on the 404 page is based on [csshake](https://github.com/elrumordelaluz/csshake) and slightly modified.
 
 ## About me
