@@ -1,7 +1,9 @@
+![chludek.com Favicon](apple-touch-icon.png)
+
 # chludek.com
 This is the repository of my [personal web site chludek.com](https://chludek.com).
 
-It's a super basic landing page at the moment. I created it back in 2016 and use it as a playground to try new things since then (and to get [100 points on google pagespeed](https://developers.google.com/speed/pagespeed/insights/?url=chludek.com) :smirk:).
+It's a super basic landing page at the moment. I created it back in 2016 and use it as a playground to try new things since then (and to get [100 points on google pagespeed/lighthouse](https://developers.google.com/speed/pagespeed/insights/?url=chludek.com) :smirk:).
 
 ## Technology
 It's all pure HTML5 and CSS3. No fancy node.js server magic, no container action, no overloaded framework, no toolchain with SASS, Polymer etc. Just nice and easy markup language that you can develop locally without installing thousands of packages (I have enough of this stuff at work :satisfied:).
