@@ -18,8 +18,7 @@
     <link rel="manifest" href="/manifest.json">
 
     <style>
-        div, section { box-sizing: border-box; }
-
+        /* Font for copy */
         @font-face {
             font-family: 'BebasNeueRegular';
             src: url("/fonts/BebasNeue.woff2") format("woff2"),
@@ -29,6 +28,7 @@
             font-display: swap;
         }
 
+        /* Font for '<3' */
         @font-face {
             font-family: 'MunroRegular';
             src: url("/fonts/munro-modified.woff2") format("woff2"),
@@ -37,6 +37,8 @@
             font-style: normal;
             font-display: swap;
         }
+
+        * { box-sizing: border-box; }
 
         html, body {
             display: flex;
@@ -51,12 +53,6 @@
             font-size: 16px;
             letter-spacing: 0;
             color: #dfdfdf;
-        }
-
-        ::selection {
-            background: #00d8ff;
-            text-shadow: none;
-            color: #ffffff;
         }
 
         main {
@@ -141,6 +137,12 @@
                         #66e8ff 40%,#66e8ff 60%,
                         #99f0ff 60%,#99f0ff 80%,
                         #ccf7ff 80%,#ccf7ff 100%);
+        }
+
+        ::selection {
+            background: #00d8ff;
+            text-shadow: none;
+            color: #ffffff;
         }
     </style>
 
