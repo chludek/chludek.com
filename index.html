@@ -18,6 +18,10 @@
     <link rel="manifest" href="/manifest.json">
 
     <style>
+        :root {
+            --hue-saturation-bar: 189, 100%;
+        }
+
         /* Font for copy */
         @font-face {
             font-family: 'BebasNeueRegular';
@@ -113,10 +117,10 @@
             transition: 0.3s ease-in;
         }
 
-            .overlay:hover:after {
-                background-color: rgba(32, 32, 32, 0.95);
-                color: rgba(255, 255, 255, 0.95);
-            }
+        .overlay:hover:after {
+            background-color: rgba(32, 32, 32, 0.95);
+            color: rgba(255, 255, 255, 0.95);
+        }
 
         #hey:after { content: "Hey"; }
         #me:after { content: "Yeah... That's me..."; }
@@ -125,18 +129,18 @@
             top: -0.5vmin;
         }
 
-        #color_bar {
+        #color-bar {
             width: 100%;
             height: 1.5vmax;
             position: relative;
             top: 1.8vmin;
-            background: #66e8ff;
+            background: hsl(var(--hue-saturation-bar), 70%);
             background: linear-gradient(to right,
-                        #00d8ff 0%,#00d8ff 20%,
-                        #33e0ff 20%,#33e0ff 40%,
-                        #66e8ff 40%,#66e8ff 60%,
-                        #99f0ff 60%,#99f0ff 80%,
-                        #ccf7ff 80%,#ccf7ff 100%);
+                        hsl(var(--hue-saturation-bar), 50%) 0%,  hsl(var(--hue-saturation-bar), 50%) 20%,
+                        hsl(var(--hue-saturation-bar), 60%) 20%, hsl(var(--hue-saturation-bar), 60%) 40%,
+                        hsl(var(--hue-saturation-bar), 70%) 40%, hsl(var(--hue-saturation-bar), 70%) 60%,
+                        hsl(var(--hue-saturation-bar), 80%) 60%, hsl(var(--hue-saturation-bar), 80%) 80%,
+                        hsl(var(--hue-saturation-bar), 90%) 80%, hsl(var(--hue-saturation-bar), 90%) 100%);
         }
 
         ::selection {
@@ -160,7 +164,7 @@
             </span>
         </section>
 
-        <section id="color_bar"></section>
+        <section id="color-bar"></section>
     </main>
 
 </body>
