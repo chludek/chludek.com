@@ -19,7 +19,10 @@
 
     <style>
         :root {
-            --hue-saturation-bar: 189, 100%;
+            --hsl-background: 0, 0%, 14%;
+            --hsl-font-default: 0, 0%, 87%;
+            --hsl-font-highlight: 0, 0%, 100%;
+            --hs-color-bar: 189, 100%;
         }
 
         /* Font for copy */
@@ -48,7 +51,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #242424;
+            background-color: hsl(var(--hsl-background));
             height: 100%;
             width: 100%;
             padding: 0;
@@ -56,7 +59,7 @@
             font-family: 'BebasNeueRegular', Arial, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
-            color: #dfdfdf;
+            color: hsl(var(--hsl-font-default));
         }
 
         main {
@@ -84,12 +87,12 @@
             line-height: 11.3vmin;
         }
 
-        .name { color: #ffffff; }
+        .name { color: hsl(var(--hsl-font-highlight)); }
 
         #love {
             font-family: 'MunroRegular', Arial, sans-serif;
             font-size: 12vmin;
-            color: #cf3a3a;
+            color: hsl(0, 61%, 52%);
             position: relative;
             right: 0.4vmin;
             bottom: 0.9vmin;
@@ -107,19 +110,19 @@
         }
 
         .overlay:after {
-            background-color: rgba(32, 32, 32, 0);
+            background-color: hsl(var(--hsl-background));
             display: block;
             width: 100%;
             position: absolute;
             top: 0;
             font-size: 6vmin;
-            color: rgba(255, 255, 255, 0);
-            transition: 0.3s ease-in;
+            color: hsl(var(--hsl-font-highlight));
+            opacity: 0;
+            transition: opacity 300ms cubic-bezier(0.5, -0.07, 0.58, 1);
         }
 
         .overlay:hover:after {
-            background-color: rgba(32, 32, 32, 0.95);
-            color: rgba(255, 255, 255, 0.95);
+            opacity: 0.93;
         }
 
         #hey:after { content: "Hey"; }
@@ -134,19 +137,19 @@
             height: 1.5vmax;
             position: relative;
             top: 1.8vmin;
-            background: hsl(var(--hue-saturation-bar), 70%);
+            background: hsl(var(--hs-color-bar), 70%);
             background: linear-gradient(to right,
-                        hsl(var(--hue-saturation-bar), 50%) 0%,  hsl(var(--hue-saturation-bar), 50%) 20%,
-                        hsl(var(--hue-saturation-bar), 60%) 20%, hsl(var(--hue-saturation-bar), 60%) 40%,
-                        hsl(var(--hue-saturation-bar), 70%) 40%, hsl(var(--hue-saturation-bar), 70%) 60%,
-                        hsl(var(--hue-saturation-bar), 80%) 60%, hsl(var(--hue-saturation-bar), 80%) 80%,
-                        hsl(var(--hue-saturation-bar), 90%) 80%, hsl(var(--hue-saturation-bar), 90%) 100%);
+                        hsl(var(--hs-color-bar), 50%) 0%,  hsl(var(--hs-color-bar), 50%) 20%,
+                        hsl(var(--hs-color-bar), 60%) 20%, hsl(var(--hs-color-bar), 60%) 40%,
+                        hsl(var(--hs-color-bar), 70%) 40%, hsl(var(--hs-color-bar), 70%) 60%,
+                        hsl(var(--hs-color-bar), 80%) 60%, hsl(var(--hs-color-bar), 80%) 80%,
+                        hsl(var(--hs-color-bar), 90%) 80%, hsl(var(--hs-color-bar), 90%) 100%);
         }
 
         ::selection {
-            background: #00d8ff;
+            background: hsl(var(--hs-color-bar), 50%);
             text-shadow: none;
-            color: #ffffff;
+            color: hsl(var(--hsl-font-highlight));
         }
     </style>
 

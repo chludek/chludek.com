@@ -18,8 +18,11 @@
 
     <style>
         :root {
-            --error: #cf3a3a;
-            --font: #dfdfdf;
+            --hsl-background: 0, 0%, 14%;
+            --hsl-font-default: 0, 0%, 87%;
+            --hsl-font-highlight: 0, 0%, 100%;
+            --hsl-error: 0, 61%, 52%;
+            --hs-color-bar: 189, 100%;
         }
 
         @font-face {
@@ -37,7 +40,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #242424;
+            background-color: hsl(var(--hsl-background));
             height: 100%;
             width: 100%;
             padding: 0;
@@ -45,7 +48,7 @@
             font-family: 'BebasNeueRegular', Arial, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
-            color: var(--font);
+            color: hsl(var(--hsl-font-default));
         }
 
         main {
@@ -63,21 +66,21 @@
             line-height: 17vmin;
         }
 
-        .name { color: #ffffff; }
+        .name { color: hsl(var(--hsl-font-highlight)); }
 
-        .error { color: var(--error); }
+        .error { color: hsl(var(--hsl-error)); }
 
         a {
             display: block;
-            background: var(--error);
+            background: hsl(var(--hsl-error));
             width: 100%;
             position: relative;
             top: 1.8vmin;
             font-size: 3.2vmin;
-            color: var(--font);
+            color: hsl(var(--hsl-font-default));
             text-decoration: none;
             text-align: left;
-            padding: 0.5vmin 0vmin 0.5vmin 1.2vmin;
+            padding: 0.5vmin 0 0.5vmin 1.2vmin;
         }
 
         a:hover {
@@ -148,9 +151,9 @@
         }
 
         ::selection {
-            background: #00d8ff;
+            background: hsl(var(--hs-color-bar), 50%);
             text-shadow: none;
-            color: #ffffff;
+            color: hsl(var(--hsl-font-highlight));
         }
     </style>
 
