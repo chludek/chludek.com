@@ -5,12 +5,13 @@
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
+  "orientation" : "any",
   "background_color": "#00d8ff",
   "theme_color": "#00d8ff",
   "icons": [{
     "src": "apple-touch-icon.png",
     "sizes": "192x192",
     "type": "image/png",
-    "purpose": "maskable"
+    "purpose": "any maskable"
   }]
 }
