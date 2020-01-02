@@ -18,11 +18,12 @@
 
     <style>
         :root {
-            --error: #cf3a3a;
-            --font: #dfdfdf;
+            --hsl-background: 0, 0%, 14%;
+            --hsl-font-default: 0, 0%, 87%;
+            --hsl-font-highlight: 0, 0%, 100%;
+            --hsl-error: 0, 61%, 52%;
+            --hs-color-bar: 189, 100%;
         }
-
-        div, section, a { box-sizing: border-box; }
 
         @font-face {
             font-family: 'BebasNeueRegular';
@@ -33,11 +34,13 @@
             font-display: swap;
         }
 
+        * { box-sizing: border-box; }
+
         html, body {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #242424;
+            background-color: hsl(var(--hsl-background));
             height: 100%;
             width: 100%;
             padding: 0;
@@ -45,13 +48,7 @@
             font-family: 'BebasNeueRegular', Arial, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
-            color: var(--font);
-        }
-
-        ::selection {
-            background: #00d8ff;
-            text-shadow: none;
-            color: #ffffff;
+            color: hsl(var(--hsl-font-default));
         }
 
         main {
@@ -69,26 +66,27 @@
             line-height: 17vmin;
         }
 
-        .name { color: #ffffff; }
-        .error { color: var(--error); }
+        .name { color: hsl(var(--hsl-font-highlight)); }
+
+        .error { color: hsl(var(--hsl-error)); }
 
         a {
             display: block;
-            background: var(--error);
+            background: hsl(var(--hsl-error));
             width: 100%;
             position: relative;
             top: 1.8vmin;
             font-size: 3.2vmin;
-            color: var(--font);
+            color: hsl(var(--hsl-font-default));
             text-decoration: none;
             text-align: left;
-            padding: 0.5vmin 0vmin 0.5vmin 1.2vmin;
+            padding: 0.5vmin 0 0.5vmin 1.2vmin;
         }
 
-            a:hover {
-                animation: shake-your-rump 1s ease-in-out infinite;
-                box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
-            }
+        a:hover {
+            animation: shake-your-rump 1s ease-in-out infinite;
+            box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
+        }
 
         .small { font-size: 2vmin; }
 
@@ -98,7 +96,7 @@
             height: 3vmin;
         }
 
-        /* based on https://elrumordelaluz.github.io/csshake/ ;D */
+        /* Based on https://elrumordelaluz.github.io/csshake/ ;D */
         @keyframes shake-your-rump {
             2% { transform: translate(-1px, -5px) rotate(-2.5deg); }
             4% { transform: translate(-5px, -8px) rotate(2.5deg); }
@@ -150,6 +148,12 @@
             96% { transform: translate(6px, -5px) rotate(0.5deg); }
             98% { transform: translate(10px, 4px) rotate(-0.5deg); }
             0%, 100% { transform: translate(0, 0) rotate(0); }
+        }
+
+        ::selection {
+            background: hsl(var(--hs-color-bar), 50%);
+            text-shadow: none;
+            color: hsl(var(--hsl-font-highlight));
         }
     </style>
 
