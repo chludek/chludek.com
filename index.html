@@ -13,7 +13,16 @@
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#00d8ff">
 
+    <!-- Preview for micro browser (mostly WhatsApp) -->
+    <meta property="og:title" content="Alexander Chludek ❤️ Pixel 😊 ✨">
+    <meta property="og:description" content="Alexander Chludek loves pixel, design and the internet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chludek.com">
+    <meta property="og:image" content="https://chludek.com/favicon_500x500.png">
+    <meta name="twitter:card" content="summary">
+
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
 
@@ -28,8 +37,8 @@
         /* Font for copy */
         @font-face {
             font-family: 'BebasNeueRegular';
-            src: url("/fonts/BebasNeue.woff2") format("woff2"),
-                 url("/fonts/BebasNeue.woff") format("woff");
+            src: url("fonts/BebasNeue.woff2") format("woff2"),
+                 url("fonts/BebasNeue.woff") format("woff");
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -38,8 +47,8 @@
         /* Font for '<3' */
         @font-face {
             font-family: 'MunroRegular';
-            src: url("/fonts/munro-modified.woff2") format("woff2"),
-                 url("/fonts/munro-modified.woff") format("woff");
+            src: url("fonts/munro-modified.woff2") format("woff2"),
+                 url("fonts/munro-modified.woff") format("woff");
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -139,11 +148,11 @@
             top: 1.8vmin;
             background: hsl(var(--hs-color-bar), 70%);
             background: linear-gradient(to right,
-                        hsl(var(--hs-color-bar), 50%) 0%,  hsl(var(--hs-color-bar), 50%) 20%,
-                        hsl(var(--hs-color-bar), 60%) 20%, hsl(var(--hs-color-bar), 60%) 40%,
-                        hsl(var(--hs-color-bar), 70%) 40%, hsl(var(--hs-color-bar), 70%) 60%,
-                        hsl(var(--hs-color-bar), 80%) 60%, hsl(var(--hs-color-bar), 80%) 80%,
-                        hsl(var(--hs-color-bar), 90%) 80%, hsl(var(--hs-color-bar), 90%) 100%);
+                        hsl(var(--hs-color-bar), 50%) 0% 20%,
+                        hsl(var(--hs-color-bar), 60%) 20% 40%,
+                        hsl(var(--hs-color-bar), 70%) 40% 60%,
+                        hsl(var(--hs-color-bar), 80%) 60% 80%,
+                        hsl(var(--hs-color-bar), 90%) 80% 100%);
         }
 
         ::selection {
