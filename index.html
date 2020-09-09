@@ -37,8 +37,10 @@
 
         /* Font for copy */
         @font-face {
-            font-family: 'BebasNeueRegular';
-            src: url("fonts/BebasNeue.woff2") format("woff2"),
+            font-family: BebasNeueRegular;
+            src: local(Bebas Neue Regular),
+                 local(Bebas-Neue-Regular),
+                 url("fonts/BebasNeue.woff2") format("woff2"),
                  url("fonts/BebasNeue.woff") format("woff");
             font-weight: normal;
             font-style: normal;
@@ -47,8 +49,10 @@
 
         /* Font for '<3' */
         @font-face {
-            font-family: 'MunroRegular';
-            src: url("fonts/munro-modified.woff2") format("woff2"),
+            font-family: MunroRegular;
+            src: local(Munro Regular),
+                 local(Munro-Regular),
+                 url("fonts/munro-modified.woff2") format("woff2"),
                  url("fonts/munro-modified.woff") format("woff");
             font-weight: normal;
             font-style: normal;
@@ -66,7 +70,7 @@
             width: 100%;
             padding: 0;
             margin: 0;
-            font-family: 'BebasNeueRegular', Arial, sans-serif;
+            font-family: BebasNeueRegular, Arial, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
             color: hsl(var(--hsl-font-default));
@@ -100,7 +104,7 @@
         .name { color: hsl(var(--hsl-font-highlight)); }
 
         #love {
-            font-family: 'MunroRegular', Arial, sans-serif;
+            font-family: MunroRegular, Arial, sans-serif;
             font-size: 12vmin;
             color: hsl(0 61% 52%);
             position: relative;
