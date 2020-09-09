@@ -19,7 +19,7 @@
     <meta property="og:description" content="Alexander Chludek loves pixel, design and the internet">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chludek.com">
-    <meta property="og:image" content="https://chludek.com/favicon_500x500.png">
+    <meta property="og:image" content="https://chludek.com/favicon-512.png">
     <meta name="twitter:card" content="summary">
 
     <link rel="icon" type="image/png" href="favicon.png">
@@ -29,16 +29,18 @@
 
     <style>
         :root {
-            --hsl-background: 0, 0%, 14%;
-            --hsl-font-default: 0, 0%, 87%;
-            --hsl-font-highlight: 0, 0%, 100%;
-            --hs-color-bar: 189, 100%;
+            --hsl-background: 0 0% 14%;
+            --hsl-font-default: 0 0% 87%;
+            --hsl-font-highlight: 0 0% 100%;
+            --hs-color-bar: 189 100%;
         }
 
         /* Font for copy */
         @font-face {
-            font-family: 'BebasNeueRegular';
-            src: url("fonts/BebasNeue.woff2") format("woff2"),
+            font-family: BebasNeueRegular;
+            src: local(Bebas Neue Regular),
+                 local(Bebas-Neue-Regular),
+                 url("fonts/BebasNeue.woff2") format("woff2"),
                  url("fonts/BebasNeue.woff") format("woff");
             font-weight: normal;
             font-style: normal;
@@ -47,8 +49,10 @@
 
         /* Font for '<3' */
         @font-face {
-            font-family: 'MunroRegular';
-            src: url("fonts/munro-modified.woff2") format("woff2"),
+            font-family: MunroRegular;
+            src: local(Munro Regular),
+                 local(Munro-Regular),
+                 url("fonts/munro-modified.woff2") format("woff2"),
                  url("fonts/munro-modified.woff") format("woff");
             font-weight: normal;
             font-style: normal;
@@ -66,7 +70,7 @@
             width: 100%;
             padding: 0;
             margin: 0;
-            font-family: 'BebasNeueRegular', Arial, sans-serif;
+            font-family: BebasNeueRegular, Arial, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
             color: hsl(var(--hsl-font-default));
@@ -100,9 +104,9 @@
         .name { color: hsl(var(--hsl-font-highlight)); }
 
         #love {
-            font-family: 'MunroRegular', Arial, sans-serif;
+            font-family: MunroRegular, Arial, sans-serif;
             font-size: 12vmin;
-            color: hsl(0, 61%, 52%);
+            color: hsl(0 61% 52%);
             position: relative;
             right: 0.4vmin;
             bottom: 0.9vmin;
@@ -147,17 +151,17 @@
             height: 1.5vmax;
             position: relative;
             top: 1.8vmin;
-            background: hsl(var(--hs-color-bar), 70%);
+            background: hsl(var(--hs-color-bar) 70%);
             background: linear-gradient(to right,
-                        hsl(var(--hs-color-bar), 50%) 0% 20%,
-                        hsl(var(--hs-color-bar), 60%) 20% 40%,
-                        hsl(var(--hs-color-bar), 70%) 40% 60%,
-                        hsl(var(--hs-color-bar), 80%) 60% 80%,
-                        hsl(var(--hs-color-bar), 90%) 80% 100%);
+                        hsl(var(--hs-color-bar) 50%) 0% 20%,
+                        hsl(var(--hs-color-bar) 60%) 20% 40%,
+                        hsl(var(--hs-color-bar) 70%) 40% 60%,
+                        hsl(var(--hs-color-bar) 80%) 60% 80%,
+                        hsl(var(--hs-color-bar) 90%) 80% 100%);
         }
 
         ::selection {
-            background: hsl(var(--hs-color-bar), 50%);
+            background: hsl(var(--hs-color-bar) 50%);
             text-shadow: none;
             color: hsl(var(--hsl-font-highlight));
         }

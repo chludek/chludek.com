@@ -19,16 +19,18 @@
 
     <style>
         :root {
-            --hsl-background: 0, 0%, 14%;
-            --hsl-font-default: 0, 0%, 87%;
-            --hsl-font-highlight: 0, 0%, 100%;
-            --hsl-error: 0, 61%, 52%;
-            --hs-color-bar: 189, 100%;
+            --hsl-background: 0 0% 14%;
+            --hsl-font-default: 0 0% 87%;
+            --hsl-font-highlight: 0 0% 100%;
+            --hsl-error: 0 61% 52%;
+            --hs-color-bar: 189 100%;
         }
 
         @font-face {
-            font-family: 'BebasNeueRegular';
-            src: url("fonts/BebasNeue.woff2") format("woff2"),
+            font-family: BebasNeueRegular;
+            src: local(Bebas Neue Regular),
+                 local(Bebas-Neue-Regular),
+                 url("fonts/BebasNeue.woff2") format("woff2"),
                  url("fonts/BebasNeue.woff") format("woff");
             font-weight: normal;
             font-style: normal;
@@ -46,7 +48,7 @@
             width: 100%;
             padding: 0;
             margin: 0;
-            font-family: 'BebasNeueRegular', Arial, sans-serif;
+            font-family: BebasNeueRegular, Arial, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
             color: hsl(var(--hsl-font-default));
@@ -86,7 +88,7 @@
 
         a:hover {
             animation: shake-your-rump 1s ease-in-out infinite;
-            box-shadow: 0 0 5vmin 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 5vmin 0 rgba(0 0 0 / 0.4);
         }
 
         .small { font-size: 2vmin; }
@@ -152,7 +154,7 @@
         }
 
         ::selection {
-            background: hsl(var(--hs-color-bar), 50%);
+            background: hsl(var(--hs-color-bar) 50%);
             text-shadow: none;
             color: hsl(var(--hsl-font-highlight));
         }
