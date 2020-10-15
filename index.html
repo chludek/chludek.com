@@ -44,6 +44,15 @@
             }
         }
 
+        @media print {
+            :root {
+                --hsl-background: 0 0% 100%;
+                --hsl-font-default: 0 0% 37%;
+                --hsl-font-highlight: 0 0% 14%;
+                --hsl-love: 0 79% 52%;
+            }
+        }
+
         /* Font for copy */
         @font-face {
             font-family: BebasNeueRegular;
@@ -191,8 +200,8 @@
 
         ::selection {
             background: hsl(var(--hs-color-bar) 50%);
-            text-shadow: none;
             color: hsl(var(--hsl-font-highlight));
+            text-shadow: none;
         }
     </style>
 
