@@ -80,6 +80,13 @@
             text-align: center;
         }
 
+        p { margin: 0; }
+
+        b {
+            color: hsl(var(--hsl-font-highlight));
+            font-weight: normal;
+        }
+
         .column1 {
             font-size: 12vmin;
             line-height: 11vmin;
@@ -99,8 +106,6 @@
             font-size: 15vmin;
             line-height: 11.3vmin;
         }
-
-        .name { color: hsl(var(--hsl-font-highlight)); }
 
         #love {
             font-family: MunroRegular, Arial, sans-serif;
@@ -139,7 +144,9 @@
         }
 
         #hey:after { content: "Hey"; }
+
         #me:after { content: "Yeah... That's me..."; }
+
         #pixel:after {
             content: "This -> ■";
             top: -0.5vmin;
@@ -172,12 +179,14 @@
 
     <main>
         <section id="hello">
-            <span class="column1">Oh, <div id="hey" class="overlay">hello</div> there!</span><br>
-            <span class="column2">I'm <span class="name">Alexander</span></span><br>
-            <span id="me" class="column3 name overlay">Chludek</span><br>
-            <span class="column4">and I
-                <span id="love"><span class="rotate">v</span>3</span><div id="pixel" class="overlay">Pixel</div>
-            </span>
+            <p class="column1">Oh, <span id="hey" class="overlay">hello</span> there!</p>
+            <p class="column2">I'm <b>Alexander</b></p>
+            <p id="me" class="column3 overlay"><b>Chludek</b></p>
+            <p class="column4">
+                and I
+                <span id="love"><span class="rotate">v</span>3</span>
+                <span id="pixel" class="overlay">Pixel</span>
+            </p>
         </section>
 
         <section id="color-bar"></section>
