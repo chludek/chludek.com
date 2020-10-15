@@ -44,6 +44,7 @@
             }
         }
 
+        /* Fax me your hottest cyperspace discovery 😎 */
         @media print {
             :root {
                 --hsl-background: 0 0% 100%;
@@ -171,7 +172,15 @@
             }
         }
 
-        .overlay:hover:after,
+        .overlay:hover:after {
+            opacity: 0.93;
+        }
+
+        /*
+            Ok, this has to be its own CSS selector so we don't break the hover effect
+            for browser which do not support :focus-visible yet.
+            @supports doesn't work for pseudo-classes 😑
+        */
         .overlay:focus-visible:after {
             opacity: 0.93;
         }
