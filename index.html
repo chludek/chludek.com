@@ -31,7 +31,17 @@
             --hsl-background: 0 0% 14%;
             --hsl-font-default: 0 0% 87%;
             --hsl-font-highlight: 0 0% 100%;
+            --hsl-love: 0 61% 52%;
             --hs-color-bar: 189 100%;
+        }
+
+        @media (prefers-contrast: less) {
+            :root {
+                --hsl-font-default: 0 0% 36%;
+                --hsl-font-highlight: 0 0% 52%;
+                --hsl-love: 0 32% 44%;
+                --hs-color-bar: 189 24%;
+            }
         }
 
         /* Font for copy */
@@ -117,7 +127,7 @@
         #love {
             font-family: MunroRegular, Arial, sans-serif;
             font-size: 12vmin;
-            color: hsl(0 61% 52%);
+            color: hsl(var(--hsl-love));
             position: relative;
             right: 0.4vmin;
             bottom: 0.9vmin;
@@ -144,6 +154,12 @@
             color: hsl(var(--hsl-font-highlight));
             opacity: 0;
             transition: opacity 300ms cubic-bezier(0.5, -0.07, 0.58, 1);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .overlay:after {
+                transition-duration: 0s;
+            }
         }
 
         .overlay:hover:after,
@@ -191,8 +207,7 @@
             <p id="me" class="column3 overlay" tabindex="0"><b>Chludek</b></p>
             <p class="column4">
                 and I
-                <span id="love"><span class="rotate">v</span>3</span>
-                <span id="pixel" class="overlay" tabindex="0">Pixel</span>
+                <span id="love"><span class="rotate">v</span>3</span><span id="pixel" class="overlay" tabindex="0">Pixel</span>
             </p>
         </section>
 

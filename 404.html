@@ -25,6 +25,15 @@
             --hs-color-bar: 189 100%;
         }
 
+        @media (prefers-contrast: less) {
+            :root {
+                --hsl-font-default: 0 0% 36%;
+                --hsl-font-highlight: 0 0% 52%;
+                --hsl-error: 0 32% 44%;
+                --hs-color-bar: 189 24%;
+            }
+        }
+
         @font-face {
             font-family: BebasNeueRegular;
             src: local(Bebas Neue Regular),
@@ -104,6 +113,14 @@
         a:focus-visible {
             animation: shake-your-rump 1s ease-in-out infinite;
             box-shadow: 0 0 5vmin 0 hsla(0 0% 0% / 0.4);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            a:hover,
+            a:focus-visible {
+                animation: none;
+                box-shadow: none;
+            }
         }
 
         small { font-size: 2vmin; }
