@@ -38,6 +38,13 @@
 
         * { box-sizing: border-box; }
 
+        :focus { outline: none; }
+
+        :focus-visible {
+            outline: hsl(var(--hs-color-bar) 70%) solid 0.5vmin;
+            outline-offset: 0.1vmin;
+        }
+
         html, body {
             display: flex;
             align-items: center;
@@ -93,7 +100,8 @@
             padding: 0.5vmin 0 0.5vmin 1.2vmin;
         }
 
-        a:hover {
+        a:hover,
+        a:focus-visible {
             animation: shake-your-rump 1s ease-in-out infinite;
             box-shadow: 0 0 5vmin 0 hsla(0 0% 0% / 0.4);
         }
