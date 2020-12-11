@@ -96,11 +96,11 @@
             width: 100%;
             padding: 0;
             margin: 0;
+            perspective: 40vmax;
             font-family: BebasNeueRegular, sans-serif;
             font-size: 16px;
             letter-spacing: 0;
             color: hsl(var(--hsl-font-default));
-            perspective: 40vmax;
         }
 
         main {
@@ -137,7 +137,7 @@
         }
 
         #love {
-            font-family: MunroRegular, Arial, sans-serif;
+            font-family: MunroRegular, sans-serif;
             font-size: 12vmin;
             color: hsl(var(--hsl-love));
             position: relative;
@@ -233,7 +233,8 @@
 </body>
 
 <script>
-    const spinIt = document.querySelectorAll("main")
+    // Tilt the page based on gyroscope data of the device
+    const tiltIt = document.querySelectorAll("main")
 
     if (window.DeviceOrientationEvent && window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
         window.addEventListener("deviceorientation", handleOrientationEvent, true)
@@ -242,7 +243,7 @@
             var rotateTopBottom = event.beta
             var rotateLeftRight = event.gamma
 
-            spinIt[0].setAttribute("style","transform: rotateX("+ (rotateTopBottom*0.6) +"deg) rotateY("+ (rotateLeftRight*(-0.75)) +"deg)")
+            tiltIt[0].setAttribute("style","transform: rotateX("+ (rotateTopBottom*0.6) +"deg) rotateY("+ (rotateLeftRight*(-0.75)) +"deg)")
         }
     }
 </script>
