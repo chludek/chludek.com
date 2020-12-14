@@ -240,8 +240,8 @@
         window.addEventListener("deviceorientation", handleOrientationEvent, true)
 
         function handleOrientationEvent(e) {
-            var rotateTopBottom = event.beta
-            var rotateLeftRight = event.gamma
+            var rotateTopBottom = Math.min(Math.max(event.beta, -28), 50)
+            var rotateLeftRight = Math.min(Math.max(event.gamma, -45), 45)
 
             tiltIt[0].setAttribute("style","transform: rotateX("+ (rotateTopBottom*0.6) +"deg) rotateY("+ (rotateLeftRight*(-0.75)) +"deg)")
         }
