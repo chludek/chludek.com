@@ -39,36 +39,41 @@ ErrorDocument 404 /404.html
   ExpiresByType text/html                 "access plus 1 month"
 
 # Data
-  ExpiresByType text/xml                  "access plus 1 hour"
-  ExpiresByType application/xml           "access plus 1 hour"
-  ExpiresByType application/json          "access plus 1 hour"
+  ExpiresByType text/xml                  "access plus 1 month"
+  ExpiresByType application/xml           "access plus 1 month"
+  ExpiresByType application/json          "access plus 1 month"
+  ExpiresByType application/manifest+json "access plus 1 month"
 
 # Feed
   ExpiresByType application/rss+xml       "access plus 1 hour"
   ExpiresByType application/atom+xml      "access plus 1 hour"
 
 # Favicon (cannot be renamed)
-  ExpiresByType image/x-icon              "access plus 1 month"
+  ExpiresByType image/x-icon              "access plus 1 year"
 
-# Media: images, video, audio
-  ExpiresByType image/gif                 "access plus 1 month"
-  ExpiresByType image/png                 "access plus 1 month"
-  ExpiresByType image/jpg                 "access plus 1 month"
-  ExpiresByType image/jpeg                "access plus 1 month"
-  ExpiresByType video/ogg                 "access plus 1 month"
-  ExpiresByType audio/ogg                 "access plus 1 month"
-  ExpiresByType video/mp4                 "access plus 1 month"
-  ExpiresByType video/webm                "access plus 1 month"
-
-# Webfonts
-  ExpiresByType application/x-font-woff   "access plus 1 month"
-  ExpiresByType image/svg+xml             "access plus 1 month"
+# Media: images, video, audio, font
+  ExpiresByType image/gif                 "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpg                 "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
+  ExpiresByType audio/mp3                 "access plus 1 year"
+  ExpiresByType application/x-font-woff   "access plus 1 year"
 
 # CSS and JavaScript
   ExpiresByType text/css                  "access plus 1 month"
   ExpiresByType application/javascript    "access plus 1 month"
 </ifModule>
 
+<ifModule mod_headers.c>
+  <FilesMatch "\.(ico|pdf|gif|png|jpg|svg|woff|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+
+  <FilesMatch "\.(html|css|js|json|xml|txt)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+</ifModule>
 
 # ----------------------------------------------------------------------
 # keep-alive
