@@ -19,4 +19,4 @@ It's all pure HTML5 and CSS3 (and starting to add some JavaScript 😬). No fanc
 * The button animation on the 404 page is based on [csshake](https://github.com/elrumordelaluz/csshake) and slightly modified.
 
 ## About me
-My name is Alexander Chludek and I'm working in Bonn (Germany) as a web designer and front-end dev.
+My name is Alexander Chludek and I'm working in Bonn (Germany) as a UI designer and front-end dev.
