@@ -23,18 +23,14 @@
             --hsl-font-highlight: 0 0% 100%;
             --hsl-error: 0 61% 52%;
             --hs-color-bar: 189 100%;
-        }
 
-        @media (prefers-contrast: high) {
-            :root {
+            @media (prefers-contrast: more) {
                 --hsl-background: 0 0% 0%;
                 --hsl-font-default: 0 0% 94%;
                 --hsl-error: 0 100% 50%;
             }
-        }
 
-        @media (prefers-contrast: less) {
-            :root {
+            @media (prefers-contrast: less) {
                 --hsl-font-default: 0 0% 36%;
                 --hsl-font-highlight: 0 0% 52%;
                 --hsl-error: 0 32% 44%;
@@ -53,16 +49,23 @@
             font-display: swap;
         }
 
-        * { box-sizing: border-box; }
-
-        :focus { outline: none; }
+        * {
+            box-sizing: border-box;
+        }
 
         :focus-visible {
             outline: hsl(var(--hs-color-bar) 70%) solid 0.5vmin;
             outline-offset: 0.1vmin;
         }
 
-        html, body {
+        ::selection {
+            background: hsl(var(--hs-color-bar) 50%);
+            text-shadow: none;
+            color: hsl(var(--hsl-font-highlight));
+        }
+
+        html,
+        body {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -82,7 +85,9 @@
             text-align: center;
         }
 
-        p { margin: 0; }
+        p {
+            margin: 0;
+        }
 
         b {
             color: hsl(var(--hsl-font-highlight));
@@ -105,7 +110,8 @@
         }
 
         a {
-            display: block;
+            display: flex;
+            justify-content: space-between;
             background: hsl(var(--hsl-error));
             width: 100%;
             position: relative;
@@ -115,29 +121,26 @@
             text-decoration: none;
             text-align: left;
             padding: 0.5vmin 0 0.5vmin 1.2vmin;
-        }
 
-        a:hover,
-        a:focus-visible {
-            animation: shake-your-rump 1s ease-in-out infinite;
-            box-shadow: 0 0 5vmin 0 hsla(0 0% 0% / 0.4);
-        }
+            &:hover,
+            &:focus-visible {
+                animation: shake-your-rump 1s ease-in-out infinite;
+                box-shadow: 0 0 5vmin 0 hsla(0 0% 0% / 0.4);
 
-        @media (prefers-reduced-motion: reduce) {
-            a:hover,
-            a:focus-visible {
-                animation: none;
-                box-shadow: none;
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none;
+                }
             }
         }
 
-        small { font-size: 2vmin; }
+        small {
+            font-size: 2vmin;
+        }
 
         svg {
             fill: currentColor;
             width: 3vmin;
             height: 3vmin;
-            float: right;
         }
 
         /* Based on https://elrumordelaluz.github.io/csshake/ ;D */
@@ -193,12 +196,6 @@
             98% { transform: translate(10px, 4px) rotate(-0.5deg); }
             0%, 100% { transform: translate(0, 0) rotate(0); }
         }
-
-        ::selection {
-            background: hsl(var(--hs-color-bar) 50%);
-            text-shadow: none;
-            color: hsl(var(--hsl-font-highlight));
-        }
     </style>
 </head>
 
@@ -210,7 +207,7 @@
         </section>
 
         <a href="https://chludek.com">
-            TO THE HOMEPAGE<small>, and beyond</small>
+            <p>TO THE HOMEPAGE<small>, and beyond</small></p>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <polygon points="-0.083,20 7.383,12 -0.083,4 4.388,4 11.834,12 4.388,20" />
             </svg>
